@@ -2,18 +2,16 @@
 <html lang="pt-br" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>SWAPI Web App - Movie title</title>
+    <title>SWAPI Web App - {% block title %}{% endblock %}</title>
   </head>
   <body>
     <table style="width:100%", border="1">
-      <tr><td colspan="2">Movie Name</td></tr>
-      <tr><td colspan="2">Movie Poster</td></tr>
-      <tr><td>Field</td><td>data</td><tr>
-      <tr><td>Field</td><td>data</td><tr>
-      <tr><td>Field</td><td>data</td><tr>
-      <tr><td>Field</td><td>data</td><tr>
-      <tr><td>Field</td><td>data</td><tr>
-      <tr><td>Field</td><td>data</td><tr>
+      <tr><td colspan="2"> {% block film_title %}{% endblock %} </td></tr>
+      <tr><td colspan="2"> {% block poster %}{% endblock %} </td></tr>
+      <tr><td>Director</td><td> {% block director %}{% endblock %} </td><tr>
+      <tr><td>Producer</td><td> {% block producer %}{% endblock %} </td><tr>
+      <tr><td>Release Date</td><td> {% block release %}{% endblock %} </td><tr>
+      <tr><td>Opening Crawl</td><td> {% block crawl %}{% endblock %} </td><tr>
     </table>
   </body>
 </html>

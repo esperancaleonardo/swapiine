@@ -6,7 +6,7 @@ def homepage_view(request, *args, **kwargs):
 
 def ep1_view(request, *args, **kwargs):
     #return HttpResponse("<h1>Episode 1 - The Phantom Menace</h1>")
-    return render(request, "movie_template.html", {})
+    return render(request, "episode1.html", {})
 
 def ep2_view(request, *args, **kwargs):
     #return HttpResponse("<h1>Episode 2 - Attack Of The Clones</h1>")
