@@ -70,42 +70,42 @@ def more_info1(request, *args, **kwargs):
 def more_info2(request, *args, **kwargs):
     #return HttpResponse("<h3>Want more info here</h3>")
     info_dict = gen_dict_info_from_movie(5)
-    return render(request, "info1.html", info_dict)
+    return render(request, "info2.html", info_dict)
 
 """ movie info view definition, returns a rendered .html
     file with aditional information in dict dictionary """
 def more_info3(request, *args, **kwargs):
     #return HttpResponse("<h3>Want more info here</h3>")
     info_dict = gen_dict_info_from_movie(6)
-    return render(request, "info1.html", info_dict)
+    return render(request, "info3.html", info_dict)
 
 """ movie info view definition, returns a rendered .html
     file with aditional information in dict dictionary """
 def more_info4(request, *args, **kwargs):
     #return HttpResponse("<h3>Want more info here</h3>")
     info_dict = gen_dict_info_from_movie(1)
-    return render(request, "info1.html", info_dict)
+    return render(request, "info4.html", info_dict)
 
 """ movie info view definition, returns a rendered .html
     file with aditional information in dict dictionary """
 def more_info5(request, *args, **kwargs):
     #return HttpResponse("<h3>Want more info here</h3>")
     info_dict = gen_dict_info_from_movie(2)
-    return render(request, "info1.html", info_dict)
+    return render(request, "info5.html", info_dict)
 
 """ movie info view definition, returns a rendered .html
     file with aditional information in dict dictionary """
 def more_info6(request, *args, **kwargs):
     #return HttpResponse("<h3>Want more info here</h3>")
     info_dict = gen_dict_info_from_movie(3)
-    return render(request, "info1.html", info_dict)
+    return render(request, "info6.html", info_dict)
 
 """ movie info view definition, returns a rendered .html
     file with aditional information in dict dictionary """
 def more_info7(request, *args, **kwargs):
     #return HttpResponse("<h3>Want more info here</h3>")
     info_dict = gen_dict_info_from_movie(7)
-    return render(request, "info1.html", info_dict)
+    return render(request, "info7.html", info_dict)
 
 """ generates a python dict with basic movie info consuming API data request for given a movie id """
 def gen_dict_from_movie(id):
