@@ -123,6 +123,7 @@ def gen_dict_info_from_movie(id):
     planets = []
     species = []
     spaceships = []
+    vehicles = []
 
     """ get all characters from a movie and store them """
     for person in movie.characters:
@@ -132,5 +133,32 @@ def gen_dict_info_from_movie(id):
     #print (characters)
     #print(len(characters))
 
-    dict = {'title':movie.title, 'characters': characters}
+    """ get all planets from a movie and store them """
+    for planet in movie.planets:
+        planet_id = planet.split('/')[5]
+        planets.append((swapi.get_planet(planet_id)).name)
+
+    #print (planets)
+
+    """ get all species from a movie and store them """
+    for specie in movie.species:
+        specie_id = specie.split('/')[5]
+        species.append((swapi.get_species(specie_id)).name)
+
+    """ get all starships from a movie and store them """
+    for spaceship in movie.starships:
+        ship_id = spaceship.split('/')[5]
+        spaceships.append((swapi.get_starship(ship_id)).name)
+
+
+    """ get all vehicles from a movie and store them """
+    for vehicle in movie.vehicles:
+        vehicle_id = vehicle.split('/')[5]
+        vehicles.append((swapi.get_vehicle(vehicle_id)).name)
+
+
+
+    dict = {'title':movie.title, 'characters':characters,
+            'planets':planets, 'species':species,
+            'spaceships':spaceships, 'vehicles':vehicles}
     return dict
