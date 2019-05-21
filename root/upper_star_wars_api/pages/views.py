@@ -10,28 +10,52 @@ def ep1_view(request, *args, **kwargs):
 
 def ep2_view(request, *args, **kwargs):
     #return HttpResponse("<h1>Episode 2 - Attack Of The Clones</h1>")
-    return render(request, "movie_template.html", {})
+    return render(request, "episode2.html", {})
 
 def ep3_view(request, *args, **kwargs):
     #return HttpResponse("<h1>Episode 3 - Revenge Of The Sith</h1>")
-    return render(request, "movie_template.html", {})
+    return render(request, "episode3.html", {})
 
 def ep4_view(request, *args, **kwargs):
     #return HttpResponse("<h1>Episode 4 - A New Hope</h1>")
-    return render(request, "movie_template.html", {})
+    return render(request, "episode4.html", {})
 
 def ep5_view(request, *args, **kwargs):
     #return HttpResponse("<h1>Episode 5 - The Empire Strikes Back</h1>")
-    return render(request, "movie_template.html", {})
+    return render(request, "episode5.html", {})
 
 def ep6_view(request, *args, **kwargs):
     #return HttpResponse("<h1>Episode 6 - Return Of The Jedi</h1>")
-    return render(request, "movie_template.html", {})
+    return render(request, "episode6.html", {})
 
 def ep7_view(request, *args, **kwargs):
     #return HttpResponse("<h1>Episode 7 - The Force Awakens</h1>")
-    return render(request, "movie_template.html", {})
+    return render(request, "episode7.html", {})
 
-def more_info(request, *args, **kwargs):
+def more_info1(request, *args, **kwargs):
     #return HttpResponse("<h3>Want more info here</h3>")
-    return render(request, "movie_template.html", {})
+    return render(request, "info1.html", {})
+
+def more_info2(request, *args, **kwargs):
+    #return HttpResponse("<h3>Want more info here</h3>")
+    return render(request, "info2.html", {})
+
+def more_info3(request, *args, **kwargs):
+    #return HttpResponse("<h3>Want more info here</h3>")
+    return render(request, "info3.html", {})
+
+def more_info4(request, *args, **kwargs):
+    #return HttpResponse("<h3>Want more info here</h3>")
+    return render(request, "info4.html", {})
+
+def more_info5(request, *args, **kwargs):
+    #return HttpResponse("<h3>Want more info here</h3>")
+    return render(request, "info5.html", {})
+
+def more_info6(request, *args, **kwargs):
+    #return HttpResponse("<h3>Want more info here</h3>")
+    return render(request, "info6.html", {})
+
+def more_info7(request, *args, **kwargs):
+    #return HttpResponse("<h3>Want more info here</h3>")
+    return render(request, "info7.html", {})
