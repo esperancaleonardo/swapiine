@@ -1,15 +1,21 @@
 {% extends 'info_template.html' %}
 
-{% block title %}{% endblock %}
+{% block title %}
+EP 1 - {{title}}
+{% endblock %}
 
-{% block film_title %}{% endblock %}
+{% block film_title %}
+{{title}}
+{% endblock %}
 
 {% block poster %}
 {% load static %}
 <img src="{% static "images/ep1.jpg" %}">
 {% endblock %}
 
-{% block characters %}{% endblock %}
+{% block characters %}
+{{characters}}
+{% endblock %}
 
 {% block planets %}{% endblock %}
 

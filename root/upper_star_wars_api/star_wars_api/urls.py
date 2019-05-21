@@ -15,13 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+# wiew imports from my application
 from pages.views import homepage_view
 from pages.views import  ep1_view, ep2_view, ep3_view, ep4_view, ep5_view, ep6_view, ep7_view
 from pages.views import more_info1, more_info2, more_info3, more_info4, more_info5, more_info6, more_info7
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    # oath for homepage view
     path('', homepage_view, name='home'),
+
+    # path for each movie view and its additional info view
     path('episode1/', ep1_view, name='ep1'),
         path('episode1/info/', more_info1, name='ep1_info'),
     path('episode2/', ep2_view, name='ep2'),
