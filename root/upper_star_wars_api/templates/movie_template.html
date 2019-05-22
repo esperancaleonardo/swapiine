@@ -4,15 +4,15 @@
     <meta charset="utf-8">
     <title>SWAPI Web App - {% block title %}{% endblock %}</title>
   </head>
-  <body>
-    <table style="width:100%", border="1">
-      <tr><td colspan="2"> {% block film_title %}{% endblock %} </td></tr>
-      <tr><td colspan="2" align="center"> {% block poster %}{% endblock %} </td></tr>
-      <tr><td>Director</td><td> {% block director %}{% endblock %} </td><tr>
-      <tr><td>Producer</td><td> {% block producer %}{% endblock %} </td><tr>
-      <tr><td>Release Date</td><td> {% block release %}{% endblock %} </td><tr>
-      <tr><td>Opening Crawl</td><td> {% block crawl %}{% endblock %} </td><tr>
-      <tr><td colspan="2"> {% block info %}{% endblock %} <a href={% url 'home' %}> BACK TO HOME PAGE </a></td></tr>
+  <body bgcolor="yellow">
+    <table style="width:100%", border="0">
+      <tr><td colspan="4" align="center"><h4> {% block film_title %}{% endblock %} </h4></td></tr>
+      <tr><td colspan="2" align="center" rowspan="8"> {% block poster %}{% endblock %} </td></tr>
+      <tr><td width="120" height="30" align="center"><b>Director</b></td><td> {% block director %}{% endblock %} </td><tr>
+      <tr><td width="120" height="30" align="center"><b>Producer</b></td><td> {% block producer %}{% endblock %} </td><tr>
+      <tr><td width="120" height="30" align="center"><b>Release Date</b></td><td> {% block release %}{% endblock %} </td><tr>
+      <tr><td width="120" height="30" align="center"><b>Opening Crawl</b></td><td> {% block crawl %}{% endblock %} </td><tr>
+      <tr><td colspan="4" align="center"> {% block info %}{% endblock %} <a href={% url 'home' %}> <<< BACK TO HOME PAGE </a></td></tr>
     </table>
   </body>
 </html>
