@@ -1,12 +1,14 @@
 from django.shortcuts import render, HttpResponse
 import swapi
 from time import sleep
+from operator import itemgetter
 # Create your views here.
 
 """ homepage view definition, returns a rendered .html file """
 def homepage_view(request, *args, **kwargs):
     #return HttpResponse("<h1>HomePage</h1><br/><h3>Welcome</h3></br>List of SW Movies:</br>Episode 1 - The Phantom Menace</br>Episode 2 - Attack Of The Clones</br>Episode 3 - Revenge Of The Sith</br>Episode 4 - A New Hope</br>Episode 5 - The Empire Strikes Back</br>Episode 6 - Return Of The Jedi</br>Episode 7 - The Force Awakens")
-    return render(request, "index.html", {})
+    dict = get_movies_list_by_ep()
+    return render(request, "index_data.html", dict)
 
 """ movie view definition, returns a rendered .html
     file with aditional information in dict dictionary """
@@ -161,4 +163,21 @@ def gen_dict_info_from_movie(id):
     dict = {'title':movie.title, 'characters':characters,
             'planets':planets, 'species':species,
             'spaceships':spaceships, 'vehicles':vehicles}
+    return dict
+
+""" get a film querry from API and return films in a tuple based
+    list with episode id and title values as a dict """
+def get_movies_list_by_ep():
+
+    movie_set = swapi.get_all("films")
+    movies = []
+
+    for movie in movie_set.items:
+        movies.append((movie.episode_id, movie.title))
+
+
+    movies.sort(key=itemgetter(0))
+    #print (movies)
+    dict = {'movies':movies}
+
     return dict

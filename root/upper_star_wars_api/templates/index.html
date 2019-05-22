@@ -6,15 +6,20 @@
   </head>
   <body>
     <h1>SWAPI Web App Homepage</h1><br/>
-    <h3>Welcome to the SWAPI - Star Wars API Web App</h3><br/>
-    <h4>List of SW SWAPI Movies:</h4><br/>
-    Episode 1 - <a href={% url 'ep1' %}>The Phantom Menace</a><br/>
+    <font size="+2">Welcome to the SWAPI - Star Wars API Web App</font><br/>
+    <font size="+2">List of SW SWAPI Movies:</font><br/><br/><br/>
+
+    {% block content %} {% endblock %}
+
+
+
+    <!-- Episode 1 - <a href={% url 'ep1' %}>The Phantom Menace</a><br/>
     Episode 2 - <a href={% url 'ep2' %}>Attack Of The Clones</a><br/>
     Episode 3 - <a href={% url 'ep3' %}>Revenge Of The Sith</a><br/>
     Episode 4 - <a href={% url 'ep4' %}>A New Hope</a><br/>
     Episode 5 - <a href={% url 'ep5' %}>The Empire Strikes Back</a><br/>
     Episode 6 - <a href={% url 'ep6' %}>Return Of The Jedi</a><br/>
-    Episode 7 - <a href={% url 'ep7' %}>The Force Awakens</a>
+    Episode 7 - <a href={% url 'ep7' %}>The Force Awakens</a> -->
 
   </body>
 </html>

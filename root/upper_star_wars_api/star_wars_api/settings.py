@@ -107,7 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # configuring local and time zone fom Campo Grande MS
 LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'Etc/GMT-4'
+TIME_ZONE = 'America/Campo_Grande'
 
 USE_I18N = True
 

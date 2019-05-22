@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+
+
+{% block content %}
+{% for movie in movies %}
+
+  {% with movie.0|stringformat:"s" as movie_id %}
+    {% with 'ep'|add:movie_id as link_id %}
+      <font size="+1">Episode {{movie.0}} - <a href={% url link_id %}>{{movie.1}}</a></font><br/>
+    {% endwith %}
+  {% endwith %}
+
+{% endfor %}
+{% endblock %}
