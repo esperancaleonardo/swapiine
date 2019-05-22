@@ -14,12 +14,31 @@ EP 6 - {{title}}
 {% endblock %}
 
 {% block characters %}
-{{characters}}
+  {% for character in characters %}
+    {{character}},
+  {% endfor %}
 {% endblock %}
 
-{% block planets %}{{planets}}{% endblock %}
+{% block planets %}
+  {% for planet in planets %}
+    {{planet}},
+  {% endfor %}
+{% endblock %}
 
-{% block species %}{{species}}{% endblock %}
+{% block species %}
+  {% for specie in species %}
+    {{specie}},
+  {% endfor %}
+{% endblock %}
 
-{% block spaceships %}{{spaceships}}{% endblock %}
-{% block vehicles %}{{vehicles}}{% endblock %}
+{% block spaceships %}
+  {% for spaceship in spaceships %}
+    {{spaceship}},
+  {% endfor %}
+{% endblock %}
+
+{% block vehicles %}
+  {% for vehicle in vehicles %}
+    {{vehicle}},
+  {% endfor %}
+{% endblock %}

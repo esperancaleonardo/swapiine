@@ -2,16 +2,15 @@
 <html lang="pt-br" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>SWAPI Web App - HomePage</title>
+    <title>SWAPPI Web App - HomePage</title>
   </head>
-  <body>
-    <h1>SWAPI Web App Homepage</h1><br/>
-    <font size="+2">Welcome to the SWAPI - Star Wars API Web App</font><br/>
-    <font size="+2">List of SW SWAPI Movies:</font><br/><br/><br/>
-
-    {% block content %} {% endblock %}
-
-
+  <body bgcolor="yellow">
+      <table style="width:40%", style="height:50%", align="center",  border="0">
+        <tr><td><h1 align="center">SWAPPI Web App Homepage</h1></td></tr>
+        <tr><td></br><font size="+1"><b>Welcome to the SWAPPI - Star Wars API Web App</b></font></br></td></tr>
+        <tr><td></br><font size="+1"><b>List of SW SWAPPI Movies:</b></font></br></br></td></tr>
+        <tr><td>{% block content %} {% endblock %}</td></tr>
+      </table>
 
     <!-- Episode 1 - <a href={% url 'ep1' %}>The Phantom Menace</a><br/>
     Episode 2 - <a href={% url 'ep2' %}>Attack Of The Clones</a><br/>
