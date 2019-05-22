@@ -2,18 +2,18 @@
 <html lang="pt-br" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>SWAPI Web App - {% block title %}{% endblock %} - Info Page</title>
+    <title>SWAPPI Web App - {% block title %}{% endblock %} - Info Page</title>
   </head>
-  <body>
-    <table style="width:100%", border="1">
-      <tr><td colspan="2"> {% block film_title %}{% endblock %} </td></tr>
-      <tr><td colspan="2" align="center"> {% block poster %}{% endblock %} </td></tr>
-      <tr><td>Characters</td><td> {% block characters %}{% endblock %} </td><tr>
-      <tr><td>Planets</td><td> {% block planets %}{% endblock %} </td><tr>
-      <tr><td>Species</td><td> {% block species %}{% endblock %} </td><tr>
-      <tr><td>Starships</td><td> {% block spaceships %}{% endblock %} </td><tr>
-      <tr><td>Vehicles</td><td> {% block vehicles %}{% endblock %} </td><tr>
-      <tr><td colspan="2"> {% block info %}{% endblock %} <a href={% url 'home' %}> BACK TO HOME PAGE </a></td></tr>
+  <body bgcolor="yellow">
+    <table style="width:100%", border="0">
+      <tr><td colspan="4" align="center"><h3> {% block film_title %}{% endblock %} </h3></td></tr>
+      <tr><td colspan="2" align="center" rowspan="10"> {% block poster %}{% endblock %} </td></tr>
+      <tr><td width="120" height="30" align="center"><b>Characters</b></td><td> {% block characters %}{% endblock %} </td><tr>
+      <tr><td width="120" height="30" align="center"><b>Planets</b></td><td> {% block planets %}{% endblock %} </td><tr>
+      <tr><td width="120" height="30" align="center"><b>Species</b></td><td> {% block species %}{% endblock %} </td><tr>
+      <tr><td width="120" height="30" align="center"><b>Starships</b></td><td> {% block spaceships %}{% endblock %} </td><tr>
+      <tr><td width="120" height="30" align="center"><b>Vehicles</b></td><td> {% block vehicles %}{% endblock %} </td><tr>
+      <tr><td colspan="4" align="center"> {% block info %}{% endblock %} <a href={% url 'home' %}><<< BACK TO HOME PAGE </a></td></tr>
     </table>
   </body>
 </html>
